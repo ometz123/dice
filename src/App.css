@@ -46,14 +46,10 @@
 /*added*/
 
 .dice-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .game-title {
@@ -139,8 +135,35 @@
     font-size: 1rem;
 }
 
+/* Disabled button style */
+.reset-button:disabled {
+    background-color: #ccc; /* Light grey for disabled state */
+    color: #666; /* Darker text color for contrast */
+    cursor: not-allowed; /* Shows the "not allowed" cursor */
+}
+
 .reset-button:hover {
     background-color: #FF725C;
+}
+
+/* Base button styles */
+.game-action-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Disabled button style */
+.game-action-button:disabled {
+    background-color: #ccc; /* Light grey for disabled state */
+    color: #666; /* Darker text color for contrast */
+    cursor: not-allowed; /* Shows the "not allowed" cursor */
 }
 
 button {
@@ -149,6 +172,12 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
+}
+/* Disabled button style */
+.button:disabled {
+    background-color: #ccc; /* Light grey for disabled state */
+    color: #666; /* Darker text color for contrast */
+    cursor: not-allowed; /* Shows the "not allowed" cursor */
 }
 
 button:hover {
@@ -194,6 +223,13 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+/* Disabled button style */
+.score-form-button:disabled {
+    background-color: #ccc; /* Light grey for disabled state */
+    color: #666; /* Darker text color for contrast */
+    cursor: not-allowed; /* Shows the "not allowed" cursor */
+}
+
 .score-form-button:hover {
     background-color: #0056b3;
 }
@@ -236,6 +272,42 @@ button:hover {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dice-face-rolling {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.dice-face-rolling-1 {
+    background-color: #f1f1f1;
+}
+
+.dice-face-rolling-2 {
+    background-color: #f7c8d9;
+}
+
+.dice-face-rolling-3 {
+    background-color: #f2f4c1;
+}
+
+.dice-face-rolling-4 {
+    background-color: #c8d8e4;
+}
+
+.dice-face-rolling-5 {
+    background-color: #d0f4d8;
+}
+
+.dice-face-rolling-6 {
+    background-color: #f4f4f4;
 }
 
 .dice-face-1 {
@@ -286,4 +358,133 @@ button:hover {
 
 .dice-roll-button:hover {
     background-color: #0056b3;
+}
+
+.game-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.settings-section, .game-section, .scores-section {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h2,
+.game-section h2,
+.scores-section h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.player-score {
+    margin-bottom: 10px;
+}
+
+.scores-section {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-score {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.current-player-score {
+    background-color: #fef3c7; /* Light yellow highlight */
+    color: #b45309; /* Darker orange for emphasis */
+    font-weight: bold;
+    border-color: #facc15; /* Border matches highlight */
+}
+
+.player-score p {
+    margin: 5px 0;
+}
+/* src/components/BackgroundMusic.css */
+
+.background-music {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.music-controls button:hover {
+    background-color: #0056b3;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+.volume-control input[type="range"] {
+    margin: 0 10px;
+    width: 200px;
+}
+
+.volume-control span {
+    font-size: 14px;
+}
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.dice-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.dice-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder {
+    color: #aaa;
+}
+
+.rolling {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
 }

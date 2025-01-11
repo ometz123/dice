@@ -29,3 +29,7 @@ export const INITIAL_PLAYERS: Player[] = [
 ]
 
 export const WINNING_SCORE = 50;
+
+export const LOCAL_STORAGE_KEYS = {
+    DICE_GAME_STATE: 'DICE_GAME_STATE',
+}
