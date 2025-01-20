@@ -8,3 +8,8 @@ export type Player = {
     fail: [Dice, Dice]
     winningCount: number
 };
+
+export type RollHandle = {
+    parentRollDice: () => Dice;
+    parentResetDice: () => void;
+};
